@@ -3,3 +3,6 @@
 /.push-*
 /.image-*
 /.dockerfile-*
+# jetbrains IDE
+.idea
+*.iml
