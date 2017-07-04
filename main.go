@@ -86,6 +86,8 @@ func init() {
 	flagSet.BoolVar(&verbose, "verbose", false, "Verbose logging.")
 	flagSet.DurationVar(&providerConfigRetryInterval, "provider-config-retry-interval", 10*time.Second, "retry interval if provider config is unavailable")
 	flagSet.IntVar(&providerConfigRetryMax, "provider-config-retry-max", -1, "max retries if provider config is unavailable")
+	// where does log entry come from
+	log.SetFlags(log.Flags() | log.Lshortfile)
 }
 
 func main() {
